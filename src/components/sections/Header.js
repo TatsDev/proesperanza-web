@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import '@styles/css/header.css';
 
 import { Container } from '@components/global';
-import ExternalLink from '@common/ExternalLink';
+// import ExternalLink from '@common/ExternalLink';
 
 const Header = () => (
   <StaticQuery
@@ -25,25 +26,17 @@ const Header = () => (
     render={data => (
       <HeaderWrapper>
         <Container>
+          <Title>
+            <h2>Cómodos apartamentos de 2 y 3 alcobas.</h2>
+            <h3>Barrio Los Almendros, Soledad</h3>
+          </Title>
           <Grid>
             <Art>
               <Img fluid={data.art_build.childImageSharp.fluid} />
             </Art>
-            <Text>
-              <h1>
-                Fast in
-                <br />
-                every way
-                <br />
-                that matters
-              </h1>
-              <br />
-              <p>
-                <StyledExternalLink href="https://github.com/ajayns/gatsby-absurd">
-                  Check out source &nbsp;&#x2794;
-                </StyledExternalLink>
-              </p>
-            </Text>
+            <Form>
+              <h3 class="form-title">COTIZACIÓN</h3>
+            </Form>
           </Grid>
         </Container>
       </HeaderWrapper>
@@ -53,20 +46,29 @@ const Header = () => (
 
 const HeaderWrapper = styled.header`
   background-color: ${props => props.theme.color.primary};
-  padding-top: 96px;
+  padding-top: 87px;
+  background-color: blue;
 
   @media (max-width: ${props => props.theme.screen.md}) {
     padding-top: 128px;
   }
 `;
 
+const Title = styled.div`
+  text-align: center;
+
+  @media (max-width: ${props => props.theme.screen.md}) {
+    text-align: center;
+    font-size: 27%;
+  }
+`;
+
 const Art = styled.figure`
   width: 100%;
-  margin: 0;
+  align-self: center;
 
   > div {
-    width: 120%;
-    margin-bottom: -4.5%;
+    width: 114%;
 
     @media (max-width: ${props => props.theme.screen.md}) {
       width: 100%;
@@ -77,12 +79,13 @@ const Art = styled.figure`
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
-  grid-gap: 64px;
+  place-items: center;
+  grid-gap: 17px;
+  background-color: green;
 
   @media (max-width: ${props => props.theme.screen.md}) {
     grid-template-columns: 1fr;
-    grid-gap: 80px;
+    grid-gap: 37px;
 
     > ${Art} {
       order: 2;
@@ -90,21 +93,23 @@ const Grid = styled.div`
   }
 `;
 
-const Text = styled.div`
-  justify-self: center;
+const Form = styled.div`
+  margin-top: 7px;
+  align-self: start;
+  background-color: white;
 
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-self: start;
   }
 `;
 
-const StyledExternalLink = styled(ExternalLink)`
-  color: inherit;
-  text-decoration: none;
+// const StyledExternalLink = styled(ExternalLink)`
+//   color: inherit;
+//   text-decoration: none;
 
-  &:hover {
-    color: ${props => props.theme.color.black.regular};
-  }
-`;
+//   &:hover {
+//     color: ${props => props.theme.color.black.regular};
+//   }
+// `;
 
 export default Header;
