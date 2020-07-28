@@ -28,24 +28,36 @@ module.exports = {
         path: `${__dirname}/src/images/art`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `logos`,
+        path: `${__dirname}/src/images/logos`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Absurd`,
-        short_name: `absurd`,
+        name: `Proyecto Esperanza`,
+        short_name: `ProEsperanza`,
         start_url: `/`,
         background_color: `#8bd8ed`,
         theme_color: `#8bd8ed`,
         display: `minimal-ui`,
-        icon: `static/favicon.svg`,
+        icon: `static/favicon.png`,
       },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`average`, `prata\:400,700`],
+        fonts: [
+          `average`,
+          `prata\:400,700`,
+          `Catamaran\:400,800`,
+          `Montserrat\:400,600,700`,
+        ],
       },
     },
     {
