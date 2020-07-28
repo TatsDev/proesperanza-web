@@ -1,13 +1,26 @@
 import React from 'react';
-
+import { Link } from 'gatsby';
+import '../styles/css/404.css';
 import Layout from '@common/Layout';
 import { Container } from '@components/global';
 
 const NotFoundPage = () => (
   <Layout>
     <Container>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <h1 class="title">ERROR</h1>
+      <p class="zoom-area">PAGINA NO ENCONTRADA.</p>
+      <section class="error-container">
+        <span>4</span>
+        <span>
+          <span class="screen-reader-text">0</span>
+        </span>
+        <span>4</span>
+      </section>
+      <div class="link-container">
+        <Link to="/" class="more-link">
+          Volver al sitio: click aquí
+        </Link>
+      </div>
     </Container>
   </Layout>
 );
