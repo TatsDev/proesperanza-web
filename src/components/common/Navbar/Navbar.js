@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
-
+import '@styles/css/navbar.css';
+import logo from '@images/logos/Icon_Esperanza.jpg';
+import letter from '@images/logos/Letter_Esperanza.png';
 import { Container } from '@components/global';
 import {
   Nav,
   NavItem,
-  Brand,
+  // Brand,
   StyledContainer,
   NavListWrapper,
   MobileMenu,
@@ -14,8 +16,9 @@ import {
 } from './style';
 
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
+import { Link } from 'gatsby';
 
-const NAV_ITEMS = ['About', 'Brands', 'Team', 'FAQ'];
+const NAV_ITEMS = ['Proyecto', 'Brands', 'Team', 'FAQ'];
 
 class Navbar extends Component {
   state = {
@@ -59,7 +62,12 @@ class Navbar extends Component {
     return (
       <Nav {...this.props}>
         <StyledContainer>
-          <Brand>Absurd</Brand>
+          <Link to="/">
+            <div class="logo-container">
+              <img src={logo} class="logo" alt="Logo Proyecto Esperanza" />
+              <img src={letter} class="letter" alt="Letra Proyecto Esperanza" />
+            </div>
+          </Link>
           <Mobile>
             <button onClick={this.toggleMobileMenu} style={{ color: 'black' }}>
               <MenuIcon />
