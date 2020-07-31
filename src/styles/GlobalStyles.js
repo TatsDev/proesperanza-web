@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: ${props => props.theme.font.secondary};
+    color: ${props => props.theme.color.red.light};
   }
 
   h1, h2, h3, p {

@@ -21,11 +21,19 @@ const theme = {
       regular: '#211E26',
     },
     red: {
-      dark: '',
-      regular: '',
-      light: '',
+      dark: '#7A3A35',
+      regular: '#C8726B',
+      light: '#D0B0AD',
+    },
+    orange: {
+      regular: '#CA822F',
+    },
+    green: {
+      dark: '#025939',
+      regular: '#7BA61F',
     },
     primary: 'hsl(37, 82%, 96%)',
+    secondary: '#F1DDC2',
   },
   screen: {
     xs: '575px',

@@ -52,10 +52,8 @@ const Footer = () => (
         <FooterWrapper>
           <StyledContainer>
             <Copyright>
-              <h2>Absurd</h2>
+              <h2>Promotora Nueva Esperanza</h2>
               <span>
-                Illustrations by
-                {` `}
                 <ExternalLink href="https://twitter.com/diana_valeanu">
                   @diana_valeanu
                 </ExternalLink>
@@ -97,7 +95,7 @@ const FooterWrapper = styled.footer`
 const Copyright = styled.div`
   font-family: ${props => props.theme.font.secondary};
   ${props => props.theme.font_size.small};
-  color: ${props => props.theme.color.black.regular};
+  color: ${props => props.theme.color.red.regular};
 
   a {
     text-decoration: none;

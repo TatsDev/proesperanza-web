@@ -47,7 +47,7 @@ const Header = () => (
 const HeaderWrapper = styled.header`
   background-color: ${props => props.theme.color.primary};
   padding-top: 87px;
-  background-color: blue;
+  ${'' /* background-color: blue; */}
 
   @media (max-width: ${props => props.theme.screen.md}) {
     padding-top: 128px;
@@ -81,7 +81,7 @@ const Grid = styled.div`
   grid-template-columns: 1fr 1fr;
   place-items: center;
   grid-gap: 17px;
-  background-color: green;
+  ${'' /* background-color: green; */}
 
   @media (max-width: ${props => props.theme.screen.md}) {
     grid-template-columns: 1fr;

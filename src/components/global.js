@@ -4,8 +4,8 @@ export const Container = styled.div`
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 17px;
-  background: pink;
+  padding: 0 7px;
+  ${'' /* background: pink; */}
 
   @media (min-width: ${props => props.theme.screen.xs}) {
     max-width: 540px;
@@ -31,11 +31,12 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.section`
-  padding: 128px 0;
+  padding: 7px 0;
   overflow: hidden;
+  ${'' /* background-color: yellow; */}
 
   @media (max-width: ${props => props.theme.screen.md}) {
-    padding: 96px 0;
+    padding: 27px 0;
   }
 
   ${props =>
