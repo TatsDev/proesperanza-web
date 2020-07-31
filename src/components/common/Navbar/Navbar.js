@@ -63,9 +63,13 @@ class Navbar extends Component {
       <Nav {...this.props}>
         <StyledContainer>
           <Link to="/">
-            <div class="logo-container">
-              <img src={logo} class="logo" alt="Logo Proyecto Esperanza" />
-              <img src={letter} class="letter" alt="Letra Proyecto Esperanza" />
+            <div className="logo-container">
+              <img src={logo} className="logo" alt="Logo Proyecto Esperanza" />
+              <img
+                src={letter}
+                className="letter"
+                alt="Letra Proyecto Esperanza"
+              />
             </div>
           </Link>
           <Mobile>
