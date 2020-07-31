@@ -94,9 +94,9 @@ const Grid = styled.div`
 `;
 
 const Form = styled.div`
-  margin-top: 7px;
+  margin-top: 17px;
   align-self: start;
-  background-color: white;
+  ${'' /* background-color: white; */}
 
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-self: start;
