@@ -7,17 +7,17 @@ import { Container } from '@components/global';
 const NotFoundPage = () => (
   <Layout>
     <Container>
-      <h1 class="title">ERROR</h1>
-      <p class="zoom-area">PAGINA NO ENCONTRADA.</p>
-      <section class="error-container">
+      <h1 className="title">ERROR</h1>
+      <section className="error-container">
         <span>4</span>
         <span>
-          <span class="screen-reader-text">0</span>
+          <span className="screen-reader-text">0</span>
         </span>
         <span>4</span>
       </section>
-      <div class="link-container">
-        <Link to="/" class="more-link">
+      <p className="zoom-area">PAGINA NO ENCONTRADA.</p>
+      <div className="link-container">
+        <Link to="/" className="more-link">
           Volver al sitio: click aquí
         </Link>
       </div>
