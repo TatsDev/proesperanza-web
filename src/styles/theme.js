@@ -30,7 +30,8 @@ const theme = {
     },
     green: {
       dark: '#025939',
-      regular: '#7BA61F',
+      regular: '#25D366',
+      light: '#7BA61F',
     },
     primary: 'hsl(37, 82%, 96%)',
     secondary: '#F1DDC2',
