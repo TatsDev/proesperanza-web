@@ -44,7 +44,7 @@ const About = () => (
       }
     `}
     render={data => (
-      <Section id="proyecto">
+      <Section id="about">
         <Container>
           <Grid>
             <div>
@@ -101,7 +101,7 @@ const Grid = styled.div`
   text-align: right;
   align-items: center;
   justify-items: center;
-  margin: 24px 0;
+  margin: 7px 0;
 
   ${props =>
     props.inverse &&

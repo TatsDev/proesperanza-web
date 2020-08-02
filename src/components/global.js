@@ -31,7 +31,7 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.section`
-  padding: 7px 0;
+  padding: 17px 0;
   overflow: hidden;
   ${'' /* background-color: yellow; */}
 

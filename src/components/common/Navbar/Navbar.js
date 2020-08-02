@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
+import { Link } from 'gatsby';
 import '@styles/css/navbar.css';
 import logo from '@images/logos/Icon_Esperanza.jpg';
 import letter from '@images/logos/Letter_Esperanza.png';
@@ -8,7 +9,6 @@ import { Container } from '@components/global';
 import {
   Nav,
   NavItem,
-  // Brand,
   StyledContainer,
   NavListWrapper,
   MobileMenu,
@@ -16,9 +16,9 @@ import {
 } from './style';
 
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
-import { Link } from 'gatsby';
 
-const NAV_ITEMS = ['Proyecto', 'Brands', 'Team', 'FAQ'];
+// const NAV_ITEMS = ['Proyecto'];
+const NAV_ITEMS = ['About', 'Brands', 'Team', 'FAQ'];
 
 class Navbar extends Component {
   state = {

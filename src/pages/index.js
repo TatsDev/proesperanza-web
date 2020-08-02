@@ -9,7 +9,6 @@ import About from '@sections/About';
 // import Team from '@sections/Team';
 // import Faq from '@sections/Faq';
 // import Footer from '@sections/Footer';
-import '../../src/styles/css/index.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -28,15 +27,17 @@ const IndexPage = () => (
     <Faq />
     <Footer /> */}
     <FloatingButton
-      href="https://api.whatsapp.com/send?phone=573016492993"
-      class="float"
+      href="https://api.whatsapp.com/send?phone=573007861667"
       target="_blank"
       rel="noreferrer"
     >
       <FontAwesomeIcon
-        class="my-float"
         icon={['fab', 'whatsapp']}
-        style={{ color: '#FFF' }}
+        style={{
+          color: '#FFF',
+          margin: '0.4rem 0.4rem 0 0.4rem',
+          fontSize: '2.8rem',
+        }}
       />
     </FloatingButton>
   </Layout>
@@ -44,15 +45,15 @@ const IndexPage = () => (
 
 const FloatingButton = styled.a`
   position: fixed;
-  width: 60px;
-  height: 60px;
+  width: 59px;
+  height: 59px;
   bottom: 27px;
   right: 27px;
   background-color: ${props => props.theme.color.green.regular};
   border-radius: 50px;
   text-align: center;
   font-size: ${props => props.theme.font_size.small};
-  box-shadow: 1px 0.5px 4px 1px #999;
+  box-shadow: 0px -0.1px 3px 1.7px #999;
   z-index: 100;
 `;
 

@@ -1,7 +1,7 @@
 const theme = {
   font: {
-    primary: `'Prata', serif`,
-    secondary: `'Average', serif`,
+    primary: `'Roboto Slab', serif`,
+    secondary: `'Roboto', sans-serif`,
   },
   font_size: {
     small: 'font-size: 20px; line-height: 30px',
@@ -33,8 +33,8 @@ const theme = {
       regular: '#25D366',
       light: '#7BA61F',
     },
-    primary: 'hsl(37, 82%, 96%)',
-    secondary: '#F1DDC2',
+    primary: 'hsl(36.7,75%,95.3%)',
+    secondary: 'hsl(34.5,62.7%,85.3%)',
   },
   screen: {
     xs: '575px',

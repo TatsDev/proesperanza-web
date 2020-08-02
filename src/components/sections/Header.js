@@ -35,7 +35,7 @@ const Header = () => (
               <Img fluid={data.art_build.childImageSharp.fluid} />
             </Art>
             <Form>
-              <h3 class="form-title">COTIZACIÓN</h3>
+              <h3 className="form-title">COTIZACIÓN</h3>
             </Form>
           </Grid>
         </Container>
@@ -46,7 +46,8 @@ const Header = () => (
 
 const HeaderWrapper = styled.header`
   background-color: ${props => props.theme.color.primary};
-  padding-top: 87px;
+  padding: 5rem 0 3rem 0;
+  margin-bottom: 7rem;
   ${'' /* background-color: blue; */}
 
   @media (max-width: ${props => props.theme.screen.md}) {
@@ -78,9 +79,10 @@ const Art = styled.figure`
 
 const Grid = styled.div`
   display: grid;
+  padding-top: 0.7rem;
   grid-template-columns: 1fr 1fr;
   place-items: center;
-  grid-gap: 17px;
+  grid-gap: 97px;
   ${'' /* background-color: green; */}
 
   @media (max-width: ${props => props.theme.screen.md}) {
