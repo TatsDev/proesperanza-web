@@ -46,8 +46,8 @@ const Header = () => (
 
 const HeaderWrapper = styled.header`
   background-color: ${props => props.theme.color.primary};
-  padding: 5rem 0 3rem 0;
-  margin-bottom: 7rem;
+  padding: 5rem 0 2.7rem 0;
+  margin-bottom: 5rem;
   ${'' /* background-color: blue; */}
 
   @media (max-width: ${props => props.theme.screen.md}) {
@@ -57,6 +57,7 @@ const HeaderWrapper = styled.header`
 
 const Title = styled.div`
   text-align: center;
+  color: ${props => props.theme.color.red.regular};
 
   @media (max-width: ${props => props.theme.screen.md}) {
     text-align: center;
@@ -98,7 +99,14 @@ const Grid = styled.div`
 const Form = styled.div`
   margin-top: 17px;
   align-self: start;
+  border: 2px solid ${props => props.theme.color.red.light};
+  border-radius: 5px;
+  border-style: outset;
   ${'' /* background-color: white; */}
+
+  > h3 {
+    color: ${props => props.theme.color.red.dark};
+  }
 
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-self: start;
