@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: ${props => props.theme.font.secondary};
-    color: ${props => props.theme.color.red.regular};
+    color: ${props => props.theme.color.black.regular};
     background-color: ${props => props.theme.color.secondary};
   }
 
@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
     font-weight: normal;
   }
 
-  h1, h2 {
+  h1, h2, h3 {
     font-family: ${props => props.theme.font.primary};
   }
 
@@ -34,10 +34,11 @@ const GlobalStyles = createGlobalStyle`
     ${props => props.theme.font_size.large};
   }
 
-  p {
+  p, ul li{
     ${props => props.theme.font_size.regular};
-    color: ${props => props.theme.color.black.light};
+    color: ${props => props.theme.color.black.light}; 
   }
+  
 
   @media (max-width: ${props => props.theme.screen.sm}) {
     h1 {

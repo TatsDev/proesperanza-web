@@ -4,6 +4,7 @@ const theme = {
     secondary: `'Roboto', sans-serif`,
   },
   font_size: {
+    xsmall: 'font-size: 17px; line-height: 27px',
     small: 'font-size: 20px; line-height: 30px',
     regular: 'font-size: 24px; line-height: 32px',
     large: 'font-size: 30px; line-height: 40px',
@@ -27,6 +28,7 @@ const theme = {
     },
     orange: {
       regular: '#CA822F',
+      light: '#D9A454',
     },
     green: {
       dark: '#025939',
