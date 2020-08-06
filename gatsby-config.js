@@ -35,6 +35,13 @@ module.exports = {
         path: `${__dirname}/src/images/logos`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `banner`,
+        path: `${__dirname}/src/images/banner`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -44,7 +51,7 @@ module.exports = {
         short_name: `ProEsperanza`,
         start_url: `/`,
         background_color: `#FCF5EA`,
-        theme_color: `#FCF5EA`,
+        theme_color: `#FCF5EA `,
         display: `minimal-ui`,
         icon: `static/favicon.png`,
       },
