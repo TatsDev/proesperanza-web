@@ -13,7 +13,7 @@ const About = () => (
           name: { eq: "family" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 1200) {
+            fluid(maxWidth: 1400) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }

@@ -11,13 +11,13 @@ const Header = () => (
   <StaticQuery
     query={graphql`
       query {
-        art_build: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "build" }
+        banner_family: file(
+          sourceInstanceName: { eq: "banner" }
+          name: { eq: "family" }
         ) {
           childImageSharp {
             fluid(maxWidth: 1400) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
@@ -32,7 +32,7 @@ const Header = () => (
           </Title>
           <Grid>
             <Art>
-              <Img fluid={data.art_build.childImageSharp.fluid} />
+              <Img fluid={data.banner_family.childImageSharp.fluid} />
             </Art>
             <Form>
               <h3 className="form-title">COTIZACIÓN</h3>
