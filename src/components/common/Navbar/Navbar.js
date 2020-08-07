@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
 import { Link } from 'gatsby';
-import '@styles/css/navbar.css';
 import logo from '@images/logos/Icon_Esperanza.jpg';
 import letter from '@images/logos/Letter_Esperanza.png';
 import { Container } from '@components/global';
@@ -13,6 +12,7 @@ import {
   NavListWrapper,
   MobileMenu,
   Mobile,
+  Logo,
 } from './style';
 
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
@@ -63,14 +63,14 @@ class Navbar extends Component {
       <Nav {...this.props}>
         <StyledContainer>
           <Link to="/">
-            <div className="logo-container">
+            <Logo>
               <img src={logo} className="logo" alt="Logo Proyecto Esperanza" />
               <img
                 src={letter}
                 className="letter"
                 alt="Letra Proyecto Esperanza"
               />
-            </div>
+            </Logo>
           </Link>
           <Mobile>
             <button onClick={this.toggleMobileMenu} style={{ color: 'black' }}>

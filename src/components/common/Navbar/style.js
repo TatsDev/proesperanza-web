@@ -84,3 +84,17 @@ export const Mobile = styled.div`
     }
   `}
 `;
+
+export const Logo = styled.div`
+  margin: 1px 1px 1px 1px;
+
+  > .logo {
+    width: 77px;
+    height: auto;
+    margin-right: 3px;
+  }
+
+  > .letter {
+    width: 207px;
+  }
+`;
