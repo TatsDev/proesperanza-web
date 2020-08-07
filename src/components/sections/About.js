@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+// import Img from 'gatsby-image';
 import { Section, Container } from '@components/global';
 
 const About = () => (
@@ -22,7 +22,6 @@ const About = () => (
     `}
     render={data => (
       <Section id="información">
-        console.log(data);
         <Container>
           <Title>
             <h2>18 CÓMODOS APARTAMENTOS DE 2 Y 3 ALCOBAS</h2>
