@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import Pulse from 'react-reveal/Pulse';
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import '@styles/css/header.css';
+// import Img from 'gatsby-image';
 
 import { Container } from '@components/global';
+import Slides from '@common/Carousel/Slides';
+
 // import ExternalLink from '@common/ExternalLink';
 
 const Header = () => (
@@ -23,19 +25,25 @@ const Header = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <HeaderWrapper>
-        <Container>
-          <Title>
-            <h2>Cómodos apartamentos de 2 y 3 alcobas.</h2>
+        <Title>
+          <Pulse>
+            <h1>Cómodos apartamentos de 2 y 3 alcobas.</h1>
             <h3>Barrio Los Almendros, Soledad</h3>
-          </Title>
+          </Pulse>
+        </Title>
+        <Container>
           <Grid>
             <Art>
-              <Img fluid={data.banner_family.childImageSharp.fluid} />
+              <Slides />
+              {/* <Img fluid={data.banner_family.childImageSharp.fluid} /> */}
             </Art>
             <Form>
               <h3 className="form-title">COTIZACIÓN</h3>
+              <button className="btn btn-success" type="button">
+                Submit form
+              </button>
             </Form>
           </Grid>
         </Container>
@@ -45,21 +53,23 @@ const Header = () => (
 );
 
 const HeaderWrapper = styled.header`
-  background-color: ${props => props.theme.color.primary};
-  padding: 5rem 0 2.7rem 0;
+  background-color: ${(props) => props.theme.color.primary};
+  padding: 5rem 0 0.7rem 0;
   margin-bottom: 5rem;
   ${'' /* background-color: blue; */}
 
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${(props) => props.theme.screen.md}) {
     padding-top: 128px;
   }
 `;
 
 const Title = styled.div`
+  padding: 0.1rem;
   text-align: center;
-  color: ${props => props.theme.color.red.regular};
+  color: ${(props) => props.theme.color.white.regular};
+  background-color: ${(props) => props.theme.color.green.dark};
 
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${(props) => props.theme.screen.md}) {
     text-align: center;
     font-size: 27%;
   }
@@ -72,7 +82,7 @@ const Art = styled.figure`
   > div {
     width: 114%;
 
-    @media (max-width: ${props => props.theme.screen.md}) {
+    @media (max-width: ${(props) => props.theme.screen.md}) {
       width: 100%;
     }
   }
@@ -80,13 +90,13 @@ const Art = styled.figure`
 
 const Grid = styled.div`
   display: grid;
-  padding-top: 0.7rem;
+  padding-top: 0.2rem;
   grid-template-columns: 1fr 1fr;
   place-items: center;
-  grid-gap: 97px;
+  grid-gap: 87px;
   ${'' /* background-color: green; */}
 
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${(props) => props.theme.screen.md}) {
     grid-template-columns: 1fr;
     grid-gap: 37px;
 
@@ -99,16 +109,16 @@ const Grid = styled.div`
 const Form = styled.div`
   margin-top: 17px;
   align-self: start;
-  border: 2px solid ${props => props.theme.color.red.light};
+  border: 2px solid ${(props) => props.theme.color.red.light};
   border-radius: 5px;
   border-style: outset;
   ${'' /* background-color: white; */}
 
   > h3 {
-    color: ${props => props.theme.color.red.dark};
+    color: ${(props) => props.theme.color.red.dark};
   }
 
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${(props) => props.theme.screen.md}) {
     justify-self: start;
   }
 `;
