@@ -105,7 +105,7 @@ const ZoomArea = styled.p`
   font-size: 27px;
   font-weight: bold;
   text-align: center;
-  color: ${props => props.theme.color.red.regular};
+  color: ${(props) => props.theme.color.red.regular};
 `;
 
 const LinkContainer = styled.div`
@@ -116,10 +116,10 @@ const MoreLink = styled.a`
   text-transform: uppercase;
   font-size: 17px;
   font-weight: 500;
-  background-color: ${props => props.theme.color.red.dark};
+  background-color: ${(props) => props.theme.color.red.dark};
   padding: 10px 15px;
   border-radius: 0;
-  color: ${props => props.theme.color.white.regular};
+  color: ${(props) => props.theme.color.white.regular};
   display: inline-block;
   margin-right: 5px;
   margin-bottom: 5px;
