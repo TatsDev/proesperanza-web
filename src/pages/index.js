@@ -49,10 +49,10 @@ const FloatingButton = styled.a`
   height: 59px;
   bottom: 27px;
   right: 27px;
-  background-color: ${props => props.theme.color.green.regular};
+  background-color: ${(props) => props.theme.color.green.regular};
   border-radius: 50px;
   text-align: center;
-  font-size: ${props => props.theme.font_size.small};
+  font-size: ${(props) => props.theme.font_size.small};
   box-shadow: 0px -0.1px 3px 1.7px #999;
   z-index: 100;
 `;
