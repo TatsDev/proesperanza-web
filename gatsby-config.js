@@ -38,8 +38,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `banner`,
-        path: `${__dirname}/src/images/banner`,
+        name: `carousel`,
+        path: `${__dirname}/src/images/carousel`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -62,7 +62,7 @@ module.exports = {
         fonts: [
           `Catamaran\:400,800`,
           `Montserrat\:400,600,700`,
-          `Roboto Slab\:700,900`,
+          `Yatra One\:900`,
           `Roboto\:400`,
         ],
       },
