@@ -77,6 +77,7 @@ module.exports = {
           '@sections': path.resolve(__dirname, 'src/components/sections'),
           '@styles': path.resolve(__dirname, 'src/styles/'),
           '@static': path.resolve(__dirname, 'static/'),
+          '@single': path.resolve(__dirname, 'src/components/single'),
         },
       },
     },
