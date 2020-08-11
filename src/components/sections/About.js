@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Zoom from 'react-reveal/Zoom';
 import { StaticQuery, graphql } from 'gatsby';
 // import Img from 'gatsby-image';
 import { Section, Container } from '@components/global';
@@ -8,8 +9,8 @@ const About = () => (
   <StaticQuery
     query={graphql`
       query {
-        banner_build: file(
-          sourceInstanceName: { eq: "banner" }
+        distribution: file(
+          sourceInstanceName: { eq: "apartment" }
           name: { eq: "family" }
         ) {
           childImageSharp {
@@ -20,41 +21,50 @@ const About = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <Section id="información">
-        <Container>
-          <Title>
-            <h2>18 CÓMODOS APARTAMENTOS DE 2 Y 3 ALCOBAS</h2>
+        <Title>
+          <Zoom top>
+            <h2>18 APARTAMENTOS DE 2 Y 3 ALCOBAS</h2>
             <h3>
               55,72 m<sup>2</sup> / 51,88 m<sup>2</sup>
             </h3>
             <h3>Ubicado en la Calle 82 entre Carreras 18A y 18B</h3>
-          </Title>
-
+          </Zoom>
+        </Title>
+        <Container>
           <Content>
+            {/* <ContentCircle>
+              <Zoom left>
+                <p>
+                  10 apartamentos <br></br>de 55,72 m<sup>2</sup>.
+                </p>
+              </Zoom>
+              <Zoom left>
+                <ul>
+                  <li>3 Alcobas</li>
+                  <li>2 Baños</li>
+                  <li>Sala - Comedor</li>
+                  <li>Cocina y labores</li>
+                </ul>
+              </Zoom>
+            </ContentCircle> */}
             <ContentCircle>
-              <p>
-                10 apartamentos <br></br>de 55,72 m<sup>2</sup>.
-              </p>
-              <ul>
-                <li>3 Alcobas</li>
-                <li>2 Baños</li>
-                <li>Sala - Comedor</li>
-                <li>Cocina y labores</li>
-              </ul>
-            </ContentCircle>
-            <ContentCircle>
-              <p>
-                8 apartamentos <br></br>de 51,88 m<sup>2</sup>
-              </p>
-              <ul>
-                <li>2 Alcobas</li>
-                <li>1 Estudio</li>
-                <li>1 Baños</li>
-                <li>Sala - Comedor</li>
-                <li>Cocina y labores</li>
-                <li>Mirador</li>
-              </ul>
+              <Zoom right>
+                <p>
+                  8 apartamentos <br></br>de 51,88 m<sup>2</sup>
+                </p>
+              </Zoom>
+              <Zoom right cascade>
+                <ul>
+                  <li>2 Alcobas</li>
+                  <li>1 Estudio</li>
+                  <li>1 Baños</li>
+                  <li>Sala - Comedor</li>
+                  <li>Cocina y labores</li>
+                  <li>Mirador</li>
+                </ul>
+              </Zoom>
             </ContentCircle>
           </Content>
 
@@ -94,13 +104,21 @@ const About = () => (
 
 const Title = styled.div`
   text-align: center;
-  ${'' /* color: ${props => props.theme.color.black.regular} */}
+  color: ${(props) => props.theme.color.white.regular};
+  background-color: ${(props) => props.theme.color.green.dark};
+  padding: 0.2rem 0 0.2rem 0;
+  ${'' /* margin-top: 2.7rem; */}
   ${'' /* display: flex;
   justify-content: center; */};
+
+  @media (max-width: ${(props) => props.theme.screen.md}) {
+    text-align: center;
+    font-size: 27%;
+  }
 `;
 
 const Content = styled.div`
-  margin-top: 3rem;
+  margin: 1rem 0 2rem 0;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -119,19 +137,20 @@ const Content = styled.div`
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
+  ${'' /* background-color: white; */}
 `;
 
 const ContentCircle = styled.div`
-  border: 1px solid ${props => props.theme.color.orange.regular};
+  border: 1px solid ${(props) => props.theme.color.orange.regular};
   height: 19rem;
   border-radius: 50%;
   padding: 3rem;
-  background-color: ${props => props.theme.color.orange.light};
+  background-color: ${(props) => props.theme.color.orange.light};
 
   > p,
   ul li {
-    color: ${props => props.theme.color.black.regular};
-    font-size: ${props => props.theme.font_size.xsmall};
+    color: ${(props) => props.theme.color.black.regular};
+    font-size: ${(props) => props.theme.font_size.xsmall};
   }
 `;
 

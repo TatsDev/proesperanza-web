@@ -1,61 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
 import Pulse from 'react-reveal/Pulse';
-import { StaticQuery, graphql } from 'gatsby';
-// import Img from 'gatsby-image';
 
 import { Container } from '@components/global';
+import Prices from '@single/Prices';
 import Slides from '@common/Carousel/Slides';
 
 // import ExternalLink from '@common/ExternalLink';
 
 const Header = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        banner_family: file(
-          sourceInstanceName: { eq: "banner" }
-          name: { eq: "family" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 1400) {
-              ...GatsbyImageSharpFluid_withWebp_noBase64
-            }
-          }
-        }
-      }
-    `}
-    render={(data) => (
-      <HeaderWrapper>
-        <Title>
-          <Pulse>
-            <h1>Cómodos apartamentos de 2 y 3 alcobas.</h1>
-            <h3>Barrio Los Almendros, Soledad</h3>
-          </Pulse>
-        </Title>
-        <Container>
-          <Grid>
-            <Art>
-              <Slides />
-              {/* <Img fluid={data.banner_family.childImageSharp.fluid} /> */}
-            </Art>
-            <Form>
-              <h3 className="form-title">COTIZACIÓN</h3>
-              <button className="btn btn-success" type="button">
-                Submit form
-              </button>
-            </Form>
-          </Grid>
-        </Container>
-      </HeaderWrapper>
-    )}
-  />
+  <HeaderWrapper>
+    <Title>
+      <Pulse>
+        <h1>Cómodos apartamentos de 2 y 3 alcobas.</h1>
+        <h3>Barrio Los Almendros, Soledad</h3>
+      </Pulse>
+    </Title>
+    <Container>
+      <Grid>
+        <Art>
+          <Slides />
+          {/* <Img fluid={data.banner_family.childImageSharp.fluid} /> */}
+        </Art>
+        <Prices />
+      </Grid>
+    </Container>
+  </HeaderWrapper>
 );
 
 const HeaderWrapper = styled.header`
   background-color: ${(props) => props.theme.color.primary};
-  padding: 5rem 0 0.7rem 0;
-  margin-bottom: 5rem;
+  padding: 4.7rem 0 3.7rem 0;
+  margin: 0 0 2rem 0;
   ${'' /* background-color: blue; */}
 
   @media (max-width: ${(props) => props.theme.screen.md}) {
@@ -64,7 +40,7 @@ const HeaderWrapper = styled.header`
 `;
 
 const Title = styled.div`
-  padding: 0.1rem;
+  padding: 7px 0 0 0;
   text-align: center;
   color: ${(props) => props.theme.color.white.regular};
   background-color: ${(props) => props.theme.color.green.dark};
@@ -90,7 +66,6 @@ const Art = styled.figure`
 
 const Grid = styled.div`
   display: grid;
-  padding-top: 0.2rem;
   grid-template-columns: 1fr 1fr;
   place-items: center;
   grid-gap: 87px;
@@ -103,23 +78,6 @@ const Grid = styled.div`
     > ${Art} {
       order: 2;
     }
-  }
-`;
-
-const Form = styled.div`
-  margin-top: 17px;
-  align-self: start;
-  border: 2px solid ${(props) => props.theme.color.red.light};
-  border-radius: 5px;
-  border-style: outset;
-  ${'' /* background-color: white; */}
-
-  > h3 {
-    color: ${(props) => props.theme.color.red.dark};
-  }
-
-  @media (max-width: ${(props) => props.theme.screen.md}) {
-    justify-self: start;
   }
 `;
 

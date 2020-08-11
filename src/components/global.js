@@ -4,26 +4,25 @@ export const Container = styled.div`
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 7px;
   ${'' /* background: pink; */}
 
-  @media (min-width: ${props => props.theme.screen.xs}) {
+  @media (min-width: ${(props) => props.theme.screen.xs}) {
     max-width: 540px;
   }
 
-  @media (min-width: ${props => props.theme.screen.sm}) {
+  @media (min-width: ${(props) => props.theme.screen.sm}) {
     max-width: 720px;
   }
 
-  @media (min-width: ${props => props.theme.screen.md}) {
+  @media (min-width: ${(props) => props.theme.screen.md}) {
     max-width: 960px;
   }
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     max-width: 1200px;
   }
 
-  ${props =>
+  ${(props) =>
     props.fluid &&
     `
     max-width: 1200px !important;
@@ -31,15 +30,15 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.section`
-  padding: 17px 0;
+  padding: 4.7rem 0;
   overflow: hidden;
   ${'' /* background-color: yellow; */}
 
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${(props) => props.theme.screen.md}) {
     padding: 27px 0;
   }
 
-  ${props =>
+  ${(props) =>
     props.accent &&
     `background-color: ${
       props.accent === 'secondary'
