@@ -7,10 +7,10 @@ const theme = {
     xsmall: 'font-size: 17px; line-height: 27px',
     small: 'font-size: 20px; line-height: 30px',
     regular: 'font-size: 24px; line-height: 32px',
-    large: 'font-size: 30px; line-height: 40px',
-    larger: 'font-size: 37px; line-height: 47px',
-    xlarge: 'font-size: 47px; line-height: 57px',
-    xxlarge: 'font-size: 87px; line-height: 97px',
+    large: 'font-size: 27px; line-height: 40px',
+    larger: 'font-size: 37px; line-height: 37px',
+    xlarge: 'font-size: 47px; line-height: 57x',
+    xxlarge: 'font-size: 57px; line-height: 75px',
   },
   color: {
     white: {
