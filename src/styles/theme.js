@@ -1,15 +1,16 @@
 const theme = {
   font: {
-    primary: `'Roboto Slab', serif`,
-    secondary: `'Roboto', sans-serif`,
+    primary: `'Yatra One', cursive`,
+    secondary: `'Noto Sans', sans-serif`,
   },
   font_size: {
     xsmall: 'font-size: 17px; line-height: 27px',
     small: 'font-size: 20px; line-height: 30px',
     regular: 'font-size: 24px; line-height: 32px',
     large: 'font-size: 30px; line-height: 40px',
-    larger: 'font-size: 36px; line-height: 48px',
-    xlarge: 'font-size: 48px; line-height: 56px',
+    larger: 'font-size: 37px; line-height: 47px',
+    xlarge: 'font-size: 47px; line-height: 57px',
+    xxlarge: 'font-size: 87px; line-height: 97px',
   },
   color: {
     white: {
@@ -35,6 +36,7 @@ const theme = {
       regular: '#25D366',
       light: '#7BA61F',
     },
+    transparent: 'rgba(0, 0, 0, 0.3)',
     primary: 'hsl(36.7,75%,95.3%)',
     secondary: 'hsl(34.5,62.7%,85.3%)',
   },

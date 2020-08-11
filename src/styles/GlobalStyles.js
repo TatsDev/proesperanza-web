@@ -8,53 +8,55 @@ const GlobalStyles = createGlobalStyle`
   ${normalize};
 
   body {
-    font-family: ${props => props.theme.font.secondary};
-    color: ${props => props.theme.color.black.regular};
-    background-color: ${props => props.theme.color.secondary};
+    font-family: ${(props) => props.theme.font.secondary};
+    color: ${(props) => props.theme.color.black.regular};
+    background-color: ${(props) => props.theme.color.secondary};
   }
 
   h1, h2, h3, p {
-    margin: 0;
+    margin: 0.5rem;
     font-weight: normal;
   }
 
   h1, h2, h3 {
-    font-family: ${props => props.theme.font.primary};
+    font-family: ${(props) => props.theme.font.primary};
+    letter-spacing: 0.1rem;
   }
 
   h1 {
-    ${props => props.theme.font_size.xlarge};
+    ${(props) => props.theme.font_size.xlarge};
+    
   }
 
   h2 {
-    ${props => props.theme.font_size.larger};
+    ${(props) => props.theme.font_size.larger};
   }
 
   h3 {
-    ${props => props.theme.font_size.large};
+    ${(props) => props.theme.font_size.large};
   }
 
   p, ul li{
-    ${props => props.theme.font_size.regular};
-    color: ${props => props.theme.color.black.light}; 
+    ${(props) => props.theme.font_size.regular};
+    color: ${(props) => props.theme.color.black.light}; 
   }
   
 
-  @media (max-width: ${props => props.theme.screen.sm}) {
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
     h1 {
-      ${props => props.theme.font_size.larger};
+      ${(props) => props.theme.font_size.xlarger};
     }
 
     h2 {
-      ${props => props.theme.font_size.large};
+      ${(props) => props.theme.font_size.large};
     }
 
     h3 {
-      ${props => props.theme.font_size.regular};
+      ${(props) => props.theme.font_size.regular};
     }
 
     p {
-      ${props => props.theme.font_size.small};
+      ${(props) => props.theme.font_size.small};
     }
   }
 
