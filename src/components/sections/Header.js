@@ -4,7 +4,7 @@ import Pulse from 'react-reveal/Pulse';
 
 import { Container } from '@components/global';
 import Prices from '@single/Prices';
-import Slides from '@common/Carousel/Slides';
+import Slides from '@single/Slides';
 
 // import ExternalLink from '@common/ExternalLink';
 

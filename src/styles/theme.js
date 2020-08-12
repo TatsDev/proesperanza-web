@@ -33,7 +33,7 @@ const theme = {
     },
     green: {
       dark: '#025939',
-      regular: '#25D366',
+      regular: '#16A085',
       light: '#7BA61F',
     },
     transparent: 'rgba(0, 0, 0, 0.3)',

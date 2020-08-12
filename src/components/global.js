@@ -46,3 +46,59 @@ export const Section = styled.section`
         : props.theme.color.primary
     }`};
 `;
+
+export const Button = styled.button`
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 3px;
+  padding: 1rem;
+  width: 10rem;
+  margin: 0.5rem 1rem;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  box-shadow: 0 5px 15px #193047;
+  border-radius: 4px;
+  border: none;
+  background: ${(props) =>
+    props.primary
+      ? props.theme.color.green.dark
+      : props.theme.color.red.regular};
+  color: ${(props) =>
+    props.primary
+      ? props.theme.color.white.regular
+      : props.theme.color.red.dark};
+
+  :hover {
+    background: #fff;
+    box-shadow: 0px 2px 10px 5px #1abc9c;
+    color: #000;
+  }
+
+  :after {
+    content: '';
+    background: #1abc9c;
+    display: block;
+    position: absolute;
+    padding-top: 5.7%;
+    padding-left: 15.7%;
+    margin-left: -20px !important;
+    margin-top: -4%;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+
+  :active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+  }
+
+  :focus {
+    outline: 0;
+  }
+`;
+
+// export const Dropdown
