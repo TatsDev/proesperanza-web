@@ -2,20 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import Zoom from 'react-reveal/Zoom';
 import { StaticQuery, graphql } from 'gatsby';
-// import Img from 'gatsby-image';
+import Img from 'gatsby-image';
 import { Section, Container } from '@components/global';
+import AptSlides from '@single/Apartment_Slides';
 
 const About = () => (
   <StaticQuery
     query={graphql`
       query {
-        distribution: file(
+        space_dist: file(
           sourceInstanceName: { eq: "apartment" }
-          name: { eq: "family" }
+          name: { eq: "space_dist" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 1400) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            fluid(maxWidth: 1200) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
@@ -33,39 +34,48 @@ const About = () => (
           </Zoom>
         </Title>
         <Container>
+          <Art>
+            <Img
+              fluid={data.space_dist.childImageSharp.fluid}
+              style={{ width: 1200, maxWidth: '100%' }}
+            />
+          </Art>
           <Content>
-            {/* <ContentCircle>
-              <Zoom left>
-                <p>
-                  10 apartamentos <br></br>de 55,72 m<sup>2</sup>.
-                </p>
-              </Zoom>
-              <Zoom left>
-                <ul>
-                  <li>3 Alcobas</li>
-                  <li>2 Baños</li>
-                  <li>Sala - Comedor</li>
-                  <li>Cocina y labores</li>
-                </ul>
-              </Zoom>
-            </ContentCircle> */}
-            <ContentCircle>
-              <Zoom right>
-                <p>
-                  8 apartamentos <br></br>de 51,88 m<sup>2</sup>
-                </p>
-              </Zoom>
-              <Zoom right cascade>
-                <ul>
-                  <li>2 Alcobas</li>
-                  <li>1 Estudio</li>
-                  <li>1 Baños</li>
-                  <li>Sala - Comedor</li>
-                  <li>Cocina y labores</li>
-                  <li>Mirador</li>
-                </ul>
-              </Zoom>
-            </ContentCircle>
+            <AptSlides />
+            <Description>
+              <div>
+                <Zoom right>
+                  <p>
+                    10 apartamentos de<br></br>55,72 m<sup>2</sup> (Tipo 1 y 2)
+                  </p>
+                </Zoom>
+                <Zoom right cascade>
+                  <ul>
+                    <li>3 Alcobas</li>
+                    <li>2 Baños</li>
+                    <li>Sala - Comedor</li>
+                    <li>Cocina y labores</li>
+                  </ul>
+                </Zoom>
+              </div>
+              <div>
+                <Zoom right>
+                  <p>
+                    8 apartamentos de<br></br>51,88 m<sup>2</sup> (Tipo 3 y 4)
+                  </p>
+                </Zoom>
+                <Zoom right cascade>
+                  <ul>
+                    <li>2 Alcobas</li>
+                    <li>1 Estudio</li>
+                    <li>1 Baños</li>
+                    <li>Sala - Comedor</li>
+                    <li>Cocina y labores</li>
+                    <li>Mirador</li>
+                  </ul>
+                </Zoom>
+              </div>
+            </Description>
           </Content>
 
           {/* <Grid inverse>
@@ -106,7 +116,8 @@ const Title = styled.div`
   text-align: center;
   color: ${(props) => props.theme.color.white.regular};
   background-color: ${(props) => props.theme.color.green.dark};
-  padding: 0.2rem 0 0.2rem 0;
+  padding: 0.4rem 0 0 0;
+  margin-botton: 0;
   ${'' /* margin-top: 2.7rem; */}
   ${'' /* display: flex;
   justify-content: center; */};
@@ -117,27 +128,39 @@ const Title = styled.div`
   }
 `;
 
-const Content = styled.div`
-  margin: 1rem 0 2rem 0;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+const Art = styled.figure`
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
+  justify-content: center;
+  margin: -7px 0 1rem 0;
+`;
+
+const Content = styled.div`
+  margin: -1rem 0 0 0;
+  display: flex;
   flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
+  align-items: center;
+  background-color: ${(props) => props.theme.color.aths_special};
+`;
+
+const Description = styled.div`
+  padding: 3rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   align-items: flex-start;
-  ${'' /* background-color: white; */}
+  ${'' /* background-color: lightgreen; */}
+
+  > div > p, ul li {
+    color: ${(props) => props.theme.color.black.regular};
+    font-size: ${(props) => props.theme.font_size.xsmall};
+  }
+  > div > p {
+    text-align: center;
+    font-weight: bold;
+  }
 `;
 
 const ContentCircle = styled.div`

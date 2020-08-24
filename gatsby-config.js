@@ -42,6 +42,13 @@ module.exports = {
         path: `${__dirname}/src/images/carousel`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `apartment`,
+        path: `${__dirname}/src/images/apartment`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

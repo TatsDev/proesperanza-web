@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { Button } from '@components/global';
 
 const Prices = () => (
@@ -13,6 +13,10 @@ const Prices = () => (
 );
 
 const Form = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   margin-top: 17px;
   align-self: start;
   border: 2px solid ${(props) => props.theme.color.red.light};
@@ -50,60 +54,7 @@ const Selector = styled.div`
   align-items: flex-start;
 `;
 
-// const Dropdown = styled.select`
-//   padding: 5px 45px 5px 10px;
-//   font-size: 1.2rem;
-//   line-height: 1.4rem;
-//   font-weight: 500;
-//   color: black;
-//   border: 2px solid black;
-//   height: 36px;
-//   border-radius: 0;
-//   appearance: none;
-//   background-image: url(${icon});
-//   background-repeat: no-repeat;
-//   background-position: right 8px center;
-
-//   ${({ theme, type }) => {
-//     switch (type) {
-//       case 'light':
-//         return css`
-//           background-color: ${theme.colors.white};
-//           color: ${theme.colors.darkGrey};
-//         `;
-//       case 'dark':
-//         return css`
-//           background-color: ${theme.colors.darkGrey};
-//           color: ${theme.colors.white};
-//         `;
-//       case 'default':
-//         return css`
-//           background-color: transparent;
-//           color: ${theme.colors.darkGrey};
-//         `;
-//     }
-//   }}
-// `;
-
-function ActionLink() {
-  function handleClick(e) {
-    e.preventDefault();
-    console.log('The link was clicked.');
-  }
+function handleClick() {
+  console.log('The link was clicked.');
 }
-
-// const Grid = styled.div`
-//   display: grid;
-//   padding-top: 0.2rem;
-//   grid-template-columns: 1fr 1fr;
-//   place-items: center;
-//   grid-gap: 87px;
-//   ${'' /* background-color: green; */}
-
-//   @media (max-width: ${(props) => props.theme.screen.md}) {
-//     grid-template-columns: 1fr;
-//     grid-gap: 37px;
-//   }
-// `;
-
 export default Prices;

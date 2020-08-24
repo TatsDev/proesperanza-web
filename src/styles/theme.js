@@ -36,6 +36,7 @@ const theme = {
       regular: '#16A085',
       light: '#7BA61F',
     },
+    aths_special: '#EEEDD7',
     transparent: 'rgba(0, 0, 0, 0.3)',
     primary: 'hsl(36.7,75%,95.3%)',
     secondary: 'hsl(34.5,62.7%,85.3%)',
