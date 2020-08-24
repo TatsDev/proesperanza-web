@@ -5,9 +5,9 @@ const theme = {
   },
   font_size: {
     xsmall: 'font-size: 17px; line-height: 27px',
-    small: 'font-size: 20px; line-height: 30px',
-    regular: 'font-size: 24px; line-height: 32px',
-    large: 'font-size: 27px; line-height: 40px',
+    small: 'font-size: 20px; line-height: 23px',
+    regular: 'font-size: 24px; line-height: 27px',
+    large: 'font-size: 27px; line-height: 33px',
     larger: 'font-size: 37px; line-height: 37px',
     xlarge: 'font-size: 47px; line-height: 57x',
     xxlarge: 'font-size: 57px; line-height: 75px',
