@@ -10,24 +10,32 @@ import '@styles/css/background-image.css';
 const width = '730px',
   height = '430px';
 const Container = styled.div`
-  border: 1px solid ${(props) => props.theme.color.transparent};
+  border: 1px solid ${(props) => props.theme.color.transparent_shadow};
   border-radius: 4px;
   box-shadow: 0px 0px 5px ${(props) => props.theme.color.red.dark};
   position: relative;
   overflow: hidden;
   width: ${width};
+  display: flex;
+  flex-direction: column;
+`;
+const Children = styled.div`
+  width: ${width};
+  position: relative;
   height: ${height};
 `;
-
 const Arrow = styled.div`
-  text-shadow: 1px 1px 1px #fff;
+  text-shadow: 2px 2px 2px ${(props) => props.theme.color.white.dark};
+  color: transparent;
+  filter: drop-shadow(0.03em 0.07em ${(props) => props.theme.color.red.dark});
+  ${'' /* mix-blend-mode: difference; */}
   z-index: 100;
   line-height: ${height};
   text-align: center;
   position: absolute;
   top: 0;
   width: 10%;
-  font-size: 3em;
+  font-size: 4rem;
   cursor: pointer;
   user-select: none;
   ${(props) =>
@@ -39,15 +47,35 @@ const Arrow = styled.div`
           left: 0%;
         `}
 `;
-const CarouselUI = ({ position, handleClick, children }) => (
+const Dot = styled.span`
+  font-size: 2.3em;
+  cursor: pointer;
+  text-shadow: 1px 1px 1px #fff;
+  user-select: none;
+`;
+const Dots = styled.span`
+  text-align: center;
+  width: ${width};
+  z-index: 100;
+`;
+const CarouselUI = ({ position, total, handleClick, children }) => (
   <Container>
-    {children}
-    <Arrow onClick={handleClick} data-position={position - 1}>
-      {'<'}
-    </Arrow>
-    <Arrow right onClick={handleClick} data-position={position + 1}>
-      {'>'}
-    </Arrow>
+    <Children>
+      {children}
+      <Arrow onClick={handleClick} data-position={position - 1}>
+        {'<'}
+      </Arrow>
+      <Arrow right onClick={handleClick} data-position={position + 1}>
+        {'>'}
+      </Arrow>
+    </Children>
+    <Dots>
+      {Array(...Array(total)).map((_val, index) => (
+        <Dot key={index} onClick={handleClick} data-position={index}>
+          {index === position ? '● ' : '○ '}
+        </Dot>
+      ))}
+    </Dots>
   </Container>
 );
 const Carousel = makeCarousel(CarouselUI);

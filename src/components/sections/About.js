@@ -118,6 +118,7 @@ const Title = styled.div`
   background-color: ${(props) => props.theme.color.green.dark};
   padding: 0.4rem 0 0 0;
   margin-botton: 0;
+  user-select: none;
   ${'' /* margin-top: 2.7rem; */}
   ${'' /* display: flex;
   justify-content: center; */};

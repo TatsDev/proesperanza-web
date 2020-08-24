@@ -10,7 +10,7 @@ import '@styles/css/background-image.css';
 const width = '530px',
   height = '430px';
 const Container = styled.div`
-  border: 1px solid ${(props) => props.theme.color.transparent};
+  border: 1px solid ${(props) => props.theme.color.transparent_shadow};
   border-radius: 4px;
   box-shadow: 0px 0px 5px ${(props) => props.theme.color.red.dark};
   position: relative;
