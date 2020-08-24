@@ -69,7 +69,7 @@ module.exports = {
         fonts: [
           `Catamaran\:400,800`,
           `Montserrat\:400,600,700`,
-          `Yatra One\:900`,
+          `Nunito Sans\:700,900`,
           `Roboto\:400`,
         ],
       },

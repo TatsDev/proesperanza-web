@@ -1,7 +1,7 @@
 const theme = {
   font: {
-    primary: `'Yatra One', cursive`,
-    secondary: `'Noto Sans', sans-serif`,
+    primary: `'Nunito Sans', sans-serif`,
+    secondary: `'Roboto', sans-serif`,
   },
   font_size: {
     xsmall: 'font-size: 17px; line-height: 27px',
@@ -18,9 +18,9 @@ const theme = {
       dark: '#F6F6F6',
     },
     black: {
-      lighter: '#ABA8AF',
-      light: '#564F62',
-      regular: '#211E26',
+      lighter: '#ABA7AF',
+      light: '#2C2C3D',
+      regular: '#211E27',
     },
     red: {
       dark: '#7A3A35',
@@ -37,7 +37,7 @@ const theme = {
       light: '#7BA61F',
     },
     aths_special: '#EEEDD7',
-    transparent: 'rgba(0, 0, 0, 0.3)',
+    transparent_shadow: 'rgba(0, 0, 0, 0.3)',
     primary: 'hsl(36.7,75%,95.3%)',
     secondary: 'hsl(34.5,62.7%,85.3%)',
   },
