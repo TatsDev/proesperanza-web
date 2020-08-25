@@ -57,7 +57,7 @@ const Slides = () => (
     query={graphql`
       query {
         slide1: file(
-          sourceInstanceName: { eq: "carousel" }
+          sourceInstanceName: { eq: "main" }
           name: { eq: "slide1" }
         ) {
           childImageSharp {
@@ -67,7 +67,7 @@ const Slides = () => (
           }
         }
         slide2: file(
-          sourceInstanceName: { eq: "carousel" }
+          sourceInstanceName: { eq: "main" }
           name: { eq: "slide2" }
         ) {
           childImageSharp {
@@ -77,7 +77,7 @@ const Slides = () => (
           }
         }
         slide3: file(
-          sourceInstanceName: { eq: "carousel" }
+          sourceInstanceName: { eq: "main" }
           name: { eq: "slide3" }
         ) {
           childImageSharp {

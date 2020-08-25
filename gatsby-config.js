@@ -38,15 +38,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `carousel`,
-        path: `${__dirname}/src/images/carousel`,
+        name: `main`,
+        path: `${__dirname}/src/images/carousel/main`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `apartment`,
-        path: `${__dirname}/src/images/apartment`,
+        path: `${__dirname}/src/images/carousel/apartment`,
       },
     },
     `gatsby-transformer-sharp`,
